@@ -17,10 +17,21 @@ class Building
   end
 
   def renter_with_highest_rent
-    highest_rent = @units.max_by do |unit|
-      require "pry"; binding.pry
-      unit.monthly_rent
+    avaiable_units = []
+    @units.each do |unit|
+      if unit.renter != nil
+        avaiable_units << unit
+      end
     end
+
+    highest_renter = avaiable_units.map do |person|
+      person.renter
+    end.first
+    # highest_rent = @units.map do |unit|
+    #   require "pry"; binding.pry
+    #     unit.monthly_rent
+    # end
+    # highest_rent.max
   end
 
 end

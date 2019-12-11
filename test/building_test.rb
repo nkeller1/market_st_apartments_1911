@@ -51,11 +51,11 @@ class BuildingTest < Minitest::Test
     @unit1.add_renter(renter2)
 
     assert_equal renter2, @building.renter_with_highest_rent
-    
+
     renter3 = Renter.new("Max")
     @unit3.add_renter(renter3)
-    #
-    assert_equal @building.renter_with_highest_rent
+    
+    assert_equal renter2, @building.renter_with_highest_rent
 
   end
 
