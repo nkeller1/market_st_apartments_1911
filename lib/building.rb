@@ -16,4 +16,11 @@ class Building
     (total_rent.to_f / @units.count.to_f).round(1)
   end
 
+  def renter_with_highest_rent
+    highest_rent = @units.max_by do |unit|
+      require "pry"; binding.pry
+      unit.monthly_rent
+    end
+  end
+
 end

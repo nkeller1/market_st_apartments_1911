@@ -138,7 +138,7 @@ pry(main)> unit1.add_renter(renter2)
 pry(main)> building.renter_with_highest_rent
 # => #<Renter:0x00007fa83b9b0358...>
 
-pry(main)> renter2 = Renter.new("Max")    
+pry(main)> renter3 = Renter.new("Max")    
 # => #<Renter:0x00007fa83b7t0456...>
 
 pry(main)> unit3.add_renter(renter3)
