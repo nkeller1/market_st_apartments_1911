@@ -26,7 +26,7 @@ class Building
 
     highest_renter = avaiable_units.max_by do |person|
       person.monthly_rent
-    end.
+    end
 
     highest_renter.renter
   end
